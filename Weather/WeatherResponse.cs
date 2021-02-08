@@ -1,10 +1,6 @@
-﻿
-namespace Weather
+﻿class WeatherResponse
 {
-    class WeatherResponse
-    {
-        public TempInfo Main { get; set; }
-        public WindInfo Wind { get; set; }
-        public string Name { get; set; }
-    }
+    public TempInfo Main { get; set; }
+    public WindInfo Wind { get; set; }
+    public string Name { get; set; }
 }

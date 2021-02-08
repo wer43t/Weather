@@ -1,8 +1,6 @@
 ﻿
-namespace Weather
+class CityInfo
 {
-    class CityInfo
-    {
-        public string City { get; set; }
-    }
+    public string City { get; set; }
 }
+

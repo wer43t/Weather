@@ -1,8 +1,5 @@
 ﻿
-namespace Weather
+class WindInfo
 {
-    class WindInfo
-    {
-        public float Speed { get; set; }
-    }
+    public float Speed { get; set; }
 }
