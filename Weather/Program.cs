@@ -16,6 +16,12 @@ namespace Weather
                 string response = WorkWithApi(cityURL);
                 CityInfo cityInfo = JsonConvert.DeserializeObject<CityInfo>(response);
 
+                Console.WriteLine($"Вы находитесь в городе {cityInfo.City}?");
+                string ovt = Console.ReadLine();
+                if (ovt == "Нет")
+                {
+                    cityInfo.City = Console.ReadLine();
+                }
                 string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityInfo.City}&units=metric&appid={ConfigurationManager.AppSettings["weatherAPI"]}";
                 response = WorkWithApi(url);
                 WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
