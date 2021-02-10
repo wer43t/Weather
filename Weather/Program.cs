@@ -20,9 +20,10 @@ namespace Weather
                 string ovt = Console.ReadLine();
                 if (ovt == "Нет")
                 {
+                    Console.WriteLine("Введите название вашего города");
                     cityInfo.City = Console.ReadLine();
                 }
-                string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityInfo.City}&units=metric&appid={ConfigurationManager.AppSettings["weatherAPI"]}";
+                string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityInfo.City}&lang=ru&units=metric&appid={ConfigurationManager.AppSettings["weatherAPI"]}";
                 response = WorkWithApi(url);
                 WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
 
